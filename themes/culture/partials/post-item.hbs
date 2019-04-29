@@ -1,0 +1,15 @@
+<a href="{{url}}" class="zine-item">
+  {{#if feature_image}}
+    <div class="mask-container">
+      <img class="zine-item-mask mask mask-1" src="{{feature_image}}" />
+    </div>
+  {{/if}}
+  <div class="zine-item-meta">
+    <h1 class="zine-item-title">
+      {{title}}  
+    </h1>
+    <p class="zine-item-tag">
+      {{primary_tag.name}}
+    </p>
+  </div>
+</a>

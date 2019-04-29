@@ -1,0 +1,10 @@
+<h1 class="post-list-title">Culture Zine</h1>
+<section class="post-list">  
+  {{#get "posts" page=pagination.page include="tags" limit="24"}}
+    <div class="zine-items">
+      {{#foreach posts}}
+        {{> post-item}}
+      {{/foreach}}
+    </div>
+  {{/get}}
+</section>

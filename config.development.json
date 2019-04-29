@@ -1,0 +1,49 @@
+{
+  "url": "http://culture-zine.glitch.me/culture",
+  "server": {
+    "port": 3000,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "sqlite3",
+    "connection": {
+      "filename": "/app/.data/ghost-local.db"
+    }
+  },
+  "mail": {
+    "transport": "Direct"
+  },
+  "logging": {
+    "count": 1,
+    "level": "error",
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "local",
+  "paths": {
+    "contentPath": "/app"
+  },
+  "caching": {
+    "frontend": {
+      "maxAge": 360
+    },
+    "301": {
+      "maxAge": 31536
+    },
+    "customRedirects": {
+      "maxAge": 31536
+    },
+    "favicon": {
+      "maxAge": 360
+    },
+    "sitemap": {
+      "maxAge": 360
+    },
+    "robotstxt": {
+      "maxAge": 3600
+    }
+  },
+  "useMinFiles": true
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <link rel="stylesheet" type="text/css" href="https://glitch.com/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://culture-zine.glitch.me/culture/styles/styles.css">
+</head>
+
+<body>
+  <div class="content page-recent">
+    <article class="zine-items">
+      {{#get "posts" limit="3" include="tags" filter="tags:twog" }}
+        {{#foreach posts}}
+          <a href="{{url}}" target="_parent" class="zine-item">
+            {{#if feature_image}}
+              <div class="mask-container">
+                <img class="zine-item-mask mask mask-1" src="{{feature_image}}" />
+              </div>
+            {{/if}}
+            <div class="zine-item-meta">
+              <h1 class="zine-item-title">
+                <span>
+                  {{title}}  
+                </span>
+              </h1>
+            </div>
+          </a>
+        {{/foreach}}
+      {{/get}}    
+    </article>
+  </div>
+</body>

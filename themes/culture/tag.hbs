@@ -1,0 +1,12 @@
+{{!< default}}
+{{#tag}}
+<h1 class="post-list-title">{{name}}</h1>
+{{/tag}}
+<section class="post-list">  
+    <div class="zine-items">
+      {{#foreach posts}}
+        {{> post-item}}
+      {{/foreach}}
+    </div>
+</section>
+{{pagination}}

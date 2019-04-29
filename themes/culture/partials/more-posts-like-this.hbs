@@ -1,0 +1,17 @@
+<section class="more-posts-like-this">
+  <h2>
+    <a href="/culture/tag/{{primary_tag.slug}}">
+      More Like This →
+    </a>
+  </h2>
+  
+  <div class="zine-items">
+    <!-- 4 posts that match the current tag and that do not have the same id as the current post -->
+    {{#get "posts" limit="4" filter="tags:{{primary_tag.slug}}+id:-{{id}}" include="tags"}}
+      {{#foreach posts}}
+        {{> post-item}}
+      {{/foreach}}
+    {{/get}}
+  </div>
+  
+</section>

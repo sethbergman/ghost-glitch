@@ -1,0 +1,8 @@
+__MACOSX/*
+themes/casper/*
+logs/*
+config.development.json.base
+.DS_Store
+styles.css
+images/*
+content/images/*

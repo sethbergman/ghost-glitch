@@ -1,0 +1,314 @@
+primary = #222
+// background-color = white
+// general-link = #244776
+// secondary = #C3C3C3
+secondary-background = #F5F5F5
+// secondary-background-hover = #EAEAEA
+// secondary-background-active = #E8E8E8
+// text-on-secondary-background = #727272
+// line-on-secondary-background = #B8B8B8
+section-line = #E5E5E5
+// input-border = #CCC
+// input-border-focused = #A2D7FF
+tertiary = #9B9B9B
+// secondary-hover-on-color = rgba(255,255,255,0.6)
+// tooltip-background = rgba(0,0,0,0.85)
+// marketing-background = #ffd1c7
+// cta = #83ffcd
+
+small-viewport-width = 580px
+medium-viewport-width = 750px
+
+// header
+//   .logo
+//     position: initial
+//     margin-bottom: 0
+    // &:hover
+    //   text-decoration: none
+    
+.featured
+  li
+    list-style-type: disc
+    display: list-item
+    
+  ul
+    display: block
+    margin-block-start: 1em
+    margin-block-end: 1em
+    margin-inline-start: 0px
+    margin-inline-end: 0px
+    padding-inline-start: 40px
+    
+  h2
+    border-radius: 5px
+    display: block
+    
+main
+  padding: 1rem 2rem
+  padding-top: 0
+  padding-bottom: 0
+  margin-left: auto
+  margin-right: auto
+  width: 100%
+  max-width: 1207px
+     
+.mask
+  mask-type: luminance
+  mask-repeat: no-repeat
+  mask-position: center
+  mask-size: contain
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+.mask-1
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-1.svg")
+.mask-2
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-2.svg")
+.mask-3
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-3.svg")
+.mask-4
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-4.svg")
+.mask-5
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-5.svg")
+
+// post
+
+.post-feature-image
+    max-width: 860px
+    width: 100%
+    margin-top: 1rem
+    margin-bottom: 1rem
+    margin-left: auto
+    margin-right: auto
+
+.post-meta
+  position: relative
+  color: tertiary
+  .post-tag
+    margin: 0
+  .post-author
+    margin-top: 0.5rem
+  
+.post-title
+  font-size: 36px
+  margin-top: 0
+  margin-bottom: 0.5rem
+
+.post
+  margin-top: 2rem
+  img
+    max-width: 100%
+  p
+    font-size: 18px
+    line-height: 24px
+  h2
+    margin-top: 2rem
+    font-size: 24px
+  h3
+    font-weight: normal
+    line-height: 24px
+    background-color: secondary-background
+    padding: 12px
+    font-size: 18px
+    border-radius: 5px
+    font-weight: normal
+  h4
+    margin-top: 2rem
+    margin-bottom: 0em
+    font-size: 18px    
+  ul
+    line-height: 30px
+    font-size: 18px
+
+.post-meta,
+.post-title,
+.inline-content
+  display: block
+  max-width: 660px
+  margin-left: auto
+  margin-right: auto
+
+.post-list-title 
+  display: block
+  max-width: 100%
+  margin-top: 1em
+  font-size: 36px
+  margin-bottom: 0.5rem  
+  
+.post
+  p,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  .wistia_embed,
+  .wistia_responsive_padding
+    max-width: 660px
+    margin-left: auto
+    margin-right: auto
+    
+  pre
+    max-width: 660px !important
+    margin-left: auto !important
+    margin-right: auto !important
+
+.wistia_embed
+  width: 100% !important
+    
+.twitter-tweet,
+.instagram-media
+  margin-left: auto !important
+  margin-right: auto !important
+
+// post gallery
+
+.gallery
+  width: 100%
+  white-space: nowrap
+  overflow-x: scroll
+  // ios scrolling fix
+  overflow-y: scroll
+  -webkit-overflow-scrolling: touch
+  
+  .item
+    max-width: 360px
+    display: inline-block
+    vertical-align: top
+    white-space: normal
+    @media(max-width: small-viewport-width)
+      max-width: 240px  
+  a
+    color: tertiary
+  p
+    font-size: 14px
+    line-height: 22px
+    margin: 0
+
+.more-posts-like-this
+  margin-bottom: 0
+
+footer
+  border-top: 0 !important
+  padding-top: 0
+  margin-top: 0
+  section
+    padding-top: 2rem
+    border-top: 1px solid section-line
+    &:first-child
+      margin-top: 0
+
+.page-recent
+  .zine-item
+    width: 31%
+
+h3.podcast {
+   font-size: 22px;
+   line-height: 28px;
+   background-color: #232831;
+   color: #ffffff;
+   margin-bottom: 0px;
+}
+
+h3.podcast a {
+   color: #ffffff;
+}
+
+blockquote {
+  max-width: 660px;
+  margin: 35px 0px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+blockquote h4 {
+  font-size: 20px; 
+}
+
+.podcastSubBig {
+  max-height: 45px;
+  height: 45px;
+  margin-right: 0.3em;
+}
+
+.tvSubSmall {
+  max-height: 18px;
+  height: 18px;
+  margin-right: 0.3em;
+}
+
+.podcastSub {
+  max-height: 2em;
+  margin-right: 0.3em;
+  margin-top: 0.5em;
+}
+
+.podcastSubs {
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+h3.podcastSubs b {
+  margin-bottom: 1em;
+}
+
+.zine-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 43%;
+    max-width: 1087px;
+}
+.zine-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+body main table {
+  border-collapse: collapse;
+}
+
+body main table, body main th, body main td {
+  border: 1px solid #e5e5e5;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 575px) { 
+  .page-recent .zine-items a:nth-child(3){
+     display:none;
+  }
+  .page-recent .zine-item {
+    width: 45%;
+  }
+}
+
+.mask-container img	
+  position: absolute	
+  width: 100%	
+  height: 100%	
+  object-fit: cover	
+  border-radius: 5px	
+
+.mask	
+  mask-type: luminance	
+  mask-repeat: no-repeat	
+  mask-position: center	
+  mask-size: contain	
+
+.mask-1	
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-1.svg")	
+.mask-2	
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-2.svg")	
+.mask-3	
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-3.svg")	
+.mask-4	
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-4.svg")	
+.mask-5	
+  mask-image: url("https://cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Fmask-5.svg")

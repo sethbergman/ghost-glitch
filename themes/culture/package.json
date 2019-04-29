@@ -1,0 +1,15 @@
+{
+    "name"        : "culture",
+    "version"     : "1.0.0",
+    "description" : "A cool time for cool friends",
+    "author": {
+        "name": "Pirijan",
+        "email": "pirijan@glitch.com",
+        "url": "https://pirijan.com"
+    },
+    "homepage"    : "https://glitch.com",
+		"license"     : "Apache License Version 2.0", 
+    "config": {
+        "posts_per_page": 24
+    }
+}

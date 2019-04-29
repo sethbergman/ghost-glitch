@@ -1,0 +1,34 @@
+{{!< default}}
+{{#post}}
+
+  <img class="post-feature-image mask mask-1" src="{{feature_image}}" />
+
+  <h1 class="post-title">{{title}}</h1>
+
+  <aside class="post-meta">
+    {{#is "post"}} 
+    <p class="post-tag">
+      {{#primary_tag}}
+      <a href="/culture/tag/{{slug}}">{{name}}</a>
+      {{/primary_tag}}
+    </p>
+    {{/is}}
+    {{#has author="Glitch Team"}}
+    {{else}}
+    <p class="post-author">
+      {{#author}}
+        by {{name}}
+      {{/author}}
+    </p>
+    {{/has}}
+  </aside>
+
+  <article id="{{id}}" class="{{post_class}}">
+    {{content}}
+  </article> 
+
+{{#has tag="Year in Review"}}
+{{else}}
+  {{> more-posts-like-this}}
+{{/has}}
+{{/post}}

@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>{{meta_title}}</title>
+{{#is "post, page"}}
+{{#post}}
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+      analytics.load("ZE6VsqXhz5izMM2cqRrVEDIrJWUKntoX");
+      analytics.page({ {{> type}} },{"context":{"groupId":"0"}});
+      }}();
+    </script>   
+      {{#if meta_description}}<meta property="og:description" content="{{meta_description}}">{{else if excerpt}}<meta property="og:description" content="{{excerpt}}">{{else if content}}<meta property="og:description" content="{{content words="100"}}">{{/if}}
+      {{#if feature_image}}
+      <meta property="og:image" content="https://glitch.com{{img_url feature_image}}">
+      <meta name="twitter:image" content="https://glitch.com{{img_url feature_image}}">
+      {{/if}}
+      {{#if meta_description}}<meta property="og:description" content="{{meta_description}}">{{else if excerpt}}<meta property="og:description" content="{{excerpt}}">{{else if content}}<meta property="og:description" content="{{content words="100"}}">{{/if}}
+      {{#foreach tags}}
+      <meta property="article:tag" content="{{name}}">
+      {{/foreach}}
+      {{#if meta_description}}<meta name="twitter:description" content="{{meta_description}}">{{else if excerpt}}<meta name="twitter:description" content="{{excerpt}}">{{else if content}}<meta name="twitter:description" content="{{content words="100"}}">{{/if}}
+      <script>
+          PARSELY = {
+              // Parsely configuration options
+              video: {
+                  onPlay: function(playerApi, videoId, metadata) {
+                      var calcDate = Date.UTC({{date format="YYYY, MM, DD"}});
+                      var metaOverrides = {
+                          pub_date_tmsp: calcDate,
+                          {{#if primary_tag}}section: "{{primary_tag.name}}",{{/if}}
+                          tags: [{{#foreach tags}}"{{name}}",{{/foreach}}"glitch"]
+                      };
+                      for (var key in metaOverrides) {
+                          if (metaOverrides[key]) {
+                              metadata[key] = metaOverrides[key];
+                          }
+                      }
+                      PARSELY.video.trackPlay(videoId, metadata);
+                  }
+              }
+          };
+      </script>      
+      <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "publisher": {
+              "@type": "Organization",
+              "name": "{{@blog.title}}",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://glitch.com/about/favicon.png",
+                  "width": 60,
+                  "height": 60
+              }
+          },
+          "author": {
+              "@type": "Person",
+              "name": "{{author.name}}",
+              "image": "https://glitch.com/culture/content/images/2018/05/fish.svg",
+              "url": "https://glitch.com/culture/author/glitch/",
+              "sameAs": [
+                  "https://glitch.com",
+                  "https://www.facebook.com/glitchdotcom",
+                  "https://twitter.com/glitch"
+              ]
+          },
+          {{#if feature_image}}
+              "image": {
+                  "@type": "ImageObject",
+                  "url": "https://glitch.com{{img_url feature_image}}"
+              },
+          {{/if}}
+          "url": "https://glitch.com{{url}}",
+          "creator": "{{author.name}}",
+          "dateCreated": "{{created_at}}",
+          {{#if feature_image}}"thumbnailUrl": "https://glitch.com{{img_url feature_image}}",{{/if}}          
+          "keywords": [{{#foreach tags}}"{{name}}",{{/foreach}}"glitch"],
+          {{#if primary_tag}}"articleSection": "{{primary_tag.name}}",{{/if}}
+          "description": "{{#if meta_description}}{{meta_description}}{{else if excerpt}}{{excerpt}}{{else if content}}{{content words="100"}}{{/if}}",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://glitch.com/culture/"
+          },
+{{/post}}
+          "headline": "{{meta_title}}"          
+      }
+      </script> 
+{{/is}}
+{{^is "post, page"}} 
+    <script>
+      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+      analytics.load("ZE6VsqXhz5izMM2cqRrVEDIrJWUKntoX");
+      analytics.page({},{"context":{"groupId":"0"}});
+      }}();
+    </script> 
+    <script type="application/ld+json">
+      {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "publisher": {
+              "@type": "Organization",
+              "name": "{{@blog.title}}",
+              "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://glitch.com/about/favicon.png",
+                  "width": 60,
+                  "height": 60
+              }
+          },
+          "author": {
+              "@type": "Organization",
+              "name": "Glitch",
+              "image": "https://glitch.com/culture/content/images/2018/05/fish.svg",
+              "url": "https://glitch.com/culture/author/glitch/",
+              "sameAs": [
+                  "https://glitch.com",
+                  "https://www.facebook.com/glitchdotcom",
+                  "https://twitter.com/glitch"
+              ]
+          },
+          "headline": "{{meta_title}}",
+          "url": "https://glitch.com{{url}}",
+          "creator": "Glitch",
+          "dateCreated": "2019-01-01T00:00:00Z"
+      }
+      </script> 
+      <script>
+          PARSELY = {
+              // Parsely configuration options
+              video: {
+                  onPlay: function(playerApi, videoId, metadata) {
+                      var metaOverrides = {
+                          section: "other",
+                          tags: ["other","glitch"]
+                      };
+                      for (var key in metaOverrides) {
+                          if (metaOverrides[key]) {
+                              metadata[key] = metaOverrides[key];
+                          }
+                      }
+                      PARSELY.video.trackPlay(videoId, metadata);
+                  }
+              }
+          };
+      </script>      
+{{/is}}   
+    <link rel="shortcut icon" href="//cdn.glitch.com/3cef6b25-69ba-4fa9-aa32-cff0fedce195%2Ffavicon.ico?1538763327435"/>
+    <link rel="stylesheet" href="//cloud.webtype.com/css/3a8e55c6-b1f3-4659-99eb-125ae72bd084.css">
+    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/glitch.css">
+    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+      <link rel="canonical" href="https://glitch.com{{url}}">    
+      <meta property="og:title" content="{{meta_title}}">
+      <meta property="og:type" content="article">
+      <link rel="shortcut icon" href="https://glitch.com/about/favicon.png" type="image/png">
+      <meta name="referrer" content="no-referrer-when-downgrade">
+      <meta property="og:site_name" content="{{@blog.title}}">
+      <meta property="og:type" content="article">
+      <meta property="og:title" content="{{meta_title}}">
+      <meta property="og:url" content="https://glitch.com{{url}}">
+      <meta property="article:author" content="https://www.facebook.com/glitchdotcom">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{meta_title}}">
+      <meta name="twitter:url" content="https://glitch.com{{url}}">
+      <meta name="twitter:label1" content="Written by">
+      <meta name="twitter:data1" content="Glitch">
+      <meta name="twitter:site" content="@glitch">  
+      <meta name="twitter:creator" content="@glitch">
+      <link rel="alternate" type="application/rss+xml" title="{{@blog.title}}" href="https://glitch.com/culture/rss/">    
+  </head>
+  <body class="{{body_class}}">
+    {{> header}}    
+    <main>      
+      {{{body}}}
+    </main>
+    <div class="content">
+      <footer id="footer">
+        {{> footer}}
+      </footer>
+    {{ghost_foot}}
+    </div>
+  <!-- START Parse.ly Include: Standard -->
+  <div id="parsely-root" style="display: none">
+  <span id="parsely-cfg" data-parsely-site="glitch.com"></span>
+  </div>
+  <script>
+  (function(s, p, d) {
+  var h=d.location.protocol, i=p+"-"+s,
+  e=d.getElementById(i), r=d.getElementById(p+"-root"),
+  u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+  :"static."+p+".com";
+  if (e) return;
+  e = d.createElement(s); e.id = i; e.async = true;
+  e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+  })("script", "parsely", document);
+  </script>
+  <!-- END Parse.ly Include: Standard -->    
+  </body>
+  <script src="/culture/logic/client.js"></script>
+</html>
