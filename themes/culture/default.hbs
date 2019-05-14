@@ -175,7 +175,13 @@
       <meta name="twitter:data1" content="Glitch">
       <meta name="twitter:site" content="@glitch">  
       <meta name="twitter:creator" content="@glitch">
-      <link rel="alternate" type="application/rss+xml" title="{{@blog.title}}" href="https://glitch.com/culture/rss/">    
+      <link rel="alternate" type="application/rss+xml" title="{{@blog.title}}" href="https://glitch.com/culture/rss/"> 
+{{#if pagination.pages}}
+    <script>
+        var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+    <script src="/culture/logic/infinitescroll.js"></script>
+{{/if}}    
   </head>
   <body class="{{body_class}}">
     {{> header}}    
