@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/glitch.css">
+    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/styles.css">
+</head>
+
+<body style="border: none; padding:0px; ">
+  <div class="post">
+      {{#get "posts" limit="1" include="tags" filter="tags:revisionpath" }}
+        {{#foreach posts}}
+          <h2>
+            <a href="{{url}}" target="_parent">
+            {{title}} 
+            </a>
+          </h2>
+          <iframe height="200px" width="100%" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrp"></iframe>
+        {{/foreach}}
+      {{/get}} 
+  </div>
+</body>
