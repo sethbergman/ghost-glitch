@@ -3,13 +3,8 @@
   
 <head>
     <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/glitch.css">
-    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/styles.css">
-    <style>
-      iframe {
-        width: 1px;
-        min-width: 100%;
-      }
-    </style>  
+    <link rel="stylesheet" type="text/css" href="//culture-zine.glitch.me/culture/styles/styles.css"> 
+    <link rel="stylesheet" href="//cloud.webtype.com/css/3a8e55c6-b1f3-4659-99eb-125ae72bd084.css">  
 </head>
 
 <body>
@@ -21,16 +16,11 @@
             {{title}} 
             </a>
           </h2>
-          <iframe id="latestRP" height="200px" width="100%" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrp"></iframe>
+          <iframe height="200px" width="100%" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrp"></iframe>
           <p>
             {{excerpt}}
           </p>
         {{/foreach}}
       {{/get}} 
-  </div>
-  <script src="/culture/logic/iframeResizer.min.js"></script>
-  <script src="/culture/logic/iframeResizer.contentWindow.min.js"></script>  
-  <script>
-    iFrameResize({ log: false, checkOrigin: false }, '#latestRP')
-  </script>  
+  </div> 
 </body>
