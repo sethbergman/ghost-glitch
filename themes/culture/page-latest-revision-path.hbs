@@ -17,11 +17,12 @@
             {{title}} 
             </a>
           </h2>
-          <iframe height="200px" width="100%" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrp"></iframe>
-          <p>
-            {{excerpt}}
-          </p>
+          <iframe id="latestRPDetailed" width="660px" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrpdetailed"></iframe>
         {{/foreach}}
       {{/get}} 
-  </div> 
+  </div>
+<script src="/culture/logic/iframeResizer.min.js"></script>
+<script>
+   iFrameResize({ log: false, checkOrigin: false }, '#latestRPDetailed')
+</script>   
 </body>
