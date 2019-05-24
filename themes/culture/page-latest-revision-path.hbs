@@ -17,10 +17,11 @@
             {{title}} 
             </a>
           </h2>
-          <iframe id="latestRPDetailed" width="660px" frameborder="no" class="inline-content" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrpdetailed"></iframe>
+          <iframe id="latestRPDetailed" width="100%" frameborder="no" scrolling="no" seamless src="https://latest-podcast-episode.glitch.me/latestrpdetailed"></iframe>
         {{/foreach}}
       {{/get}} 
-  </div>
+  </div> 
+<style>iframe#latestRPDetailed {max-width: 660px;}</style>
 <script src="/culture/logic/iframeResizer.min.js"></script>
 <script>
    iFrameResize({ log: false, checkOrigin: false }, '#latestRPDetailed')
