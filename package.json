@@ -9,15 +9,15 @@
   "dependencies": {
     "autoprefixer-stylus": "^0.14.0",
     "bson-objectid": "^1.2.3",
-    "chokidar": "^2.0.4",
     "ghost": "^1.21.4",
     "ghost-cli": "^1.4.1",
     "knex-migrator": "^3.4.0",
     "stylus": "^0.54.5",
-    "stylus-renderer": "^1.1.0"
+    "stylus-renderer": "^1.1.0",
+    "chokidar": "^2.0.4"
   },
   "engines": {
-    "node": "9.x"
+    "node": ">=10"
   },
   "repository": {
     "url": "https://glitch.com/edit/#!/culture-zine"
