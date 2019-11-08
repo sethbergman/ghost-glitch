@@ -1,9 +1,9 @@
 {
   "name": "ghost-glitch",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Ghost on Glitch",
   "scripts": {
-    "prestart": "node server.js &",
+    "prestart": "node server.js",
     "start": "bash init.sh && node node_modules/ghost/index"
   },
   "dependencies": {
@@ -17,11 +17,13 @@
     "chokidar": "^2.0.4"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=10",
+    "npm": ">=6"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/culture-zine"
+    "url": "https://github.com/sethbergman/ghost-glitch.git"
   },
+  "author": "Seth Bergman"
   "license": "MIT",
   "keywords": [
     "node",
